@@ -18,7 +18,7 @@ const Checkout = () => {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:8080/orders", {
+      const res = await fetch("https://backend-production-fccb.up.railway.app/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const Checkout = () => {
       {items.map((item) => (
         <div key={item._id} className={styles.cartItem}>
           <img
-            src={item.image ? `http://localhost:8080/${item.image}` : "/placeholder.png"}
+            src={item.image ? `https://backend-production-fccb.up.railway.app/${item.image}` : "/placeholder.png"}
             alt={item.name}
             className={styles.itemImage}
           />

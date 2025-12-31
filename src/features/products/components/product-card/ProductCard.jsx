@@ -58,7 +58,7 @@ const ProductCard = ({ data, onAddToCart }) => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/admin/products/${_id}`, {
+      const res = await fetch(`https://backend-production-fccb.up.railway.app/admin/products/${_id}`, {
         method: "DELETE",
         headers: { Authorization: "Bearer " + localStorage.getItem("token") },
       });
@@ -100,7 +100,7 @@ const ProductCard = ({ data, onAddToCart }) => {
         <div className={styles.imageContainer}>
           {isSale && <span className={styles.saleBadge}>SALE</span>}
           <img
-            src={image ? `http://localhost:8080/${image}` : "/placeholder.png"}
+            src={image ? `https://backend-production-fccb.up.railway.app/${image}` : "/placeholder.png"}
             alt={name}
             className={styles.productImage}
           />

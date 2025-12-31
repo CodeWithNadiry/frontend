@@ -18,7 +18,7 @@ const AdminProducts = () => {
   async function deleteProduct(id) {
     if (!confirm("Are you sure? This action cannot be undone.")) return;
 
-    const res = await fetch(`http://localhost:8080/admin/products/${id}`, {
+    const res = await fetch(`https://backend-production-fccb.up.railway.app/admin/products/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -64,7 +64,7 @@ const AdminProducts = () => {
                   <tr key={p._id}>
                     <td data-label="Image">
                       <img
-                        src={`http://localhost:8080/${p.image}`}
+                        src={`https://backend-production-fccb.up.railway.app/${p.image}`}
                         alt={p.name}
                         className={styles.image}
                       />
