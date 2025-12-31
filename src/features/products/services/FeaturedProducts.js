@@ -1,0 +1,77 @@
+import feature1 from "../../../assets/featured/feature1.webp";
+import feature2 from "../../../assets/featured/feature2.webp";
+import feature3 from "../../../assets/featured/feature3.webp";
+
+export const featuredProducts = [
+  {
+    id: 1,
+    name: "Dell Inspiron",
+    description:
+      "AI-powered laptops that enable every day productivity and entertainment. AI-powered laptops that enable every day productivity and entertainment. laptops that enable every day productivity and entertainment.",
+    image: feature1,
+    price: "Rs. 9,999.00",
+    regularPrice: "Rs. 11,999.00",
+    savings: "Rs. 2,000",
+    isSale: false,
+    rating: 1,
+    reviews: 9,
+    featured: true,
+    quality: "Play, School & Work",
+  },
+  {
+    id: 2,
+    name: "Dell Pro",
+    description:
+      "Professional-grade AI laptops that deliver exceptional performance, rugged durability, class-leading security, and simplified manageability. AI-powered laptops that enable every day productivity and entertainment.",
+    image: feature2,
+    price: "Rs. 10,299.00",
+    regularPrice: "Rs. 12,499.00",
+    savings: "Rs. 2,200",
+    isSale: true,
+    rating: 4.8,
+    reviews: 36,
+    featured: true,
+    quality: "Professional-Grade Productivity",
+  },
+  {
+    id: 3,
+    name: "Dell Pro Max",
+    description:
+      "Professional-grade AI laptops that unlock maximum performance through cutting-edge CPUs, pro-level GPUs, high-speed storage, and advanced memory.",
+    image: feature3,
+    price: "Rs. 27,999.00",
+    regularPrice: "Rs. 33,999.00",
+    savings: "Rs. 6,000",
+    isSale: true,
+    rating: 5,
+    reviews: 1,
+    featured: true,
+    quality: "Maximum Performance",
+  },
+  {
+    id: 4,
+    name: "Dell Pro 16 Plus 16-inch Core",
+    description: "Ultra 7 255U 16GB RAM 512GB SSD Win 11 Pro AI Laptop",
+    image: 'https://www.dellonline.co.za/cdn/shop/files/80abe7d5-36a0-4420-8128-22d1f43d619e-3_360x.jpg?v=1756200848',
+    price: "Rs. 28,499.00",
+    regularPrice: "Rs. 33,399.00",
+    savings: "Rs. 4,900",
+    isSale: true,
+    rating: 4.5,
+    reviews: 1,
+    featured: false,
+  },
+  {
+    id: 5,
+    name: "Dell Pro 14 Plus 14-inch Core",
+    description: "Ultra 5 235U 16GB RAM 512GB SSD Win 11 Pro AI Laptop",
+    image: 'https://www.dellonline.co.za/cdn/shop/files/d2dde16f-d3f4-46b2-a705-31d6bfac7800-1_360x.jpg?v=1756456328',
+    price: "Rs. 24,999.00",
+    regularPrice: "Rs. 29,499.00",
+    savings: "Rs. 4,500",
+    isSale: true,
+    rating: 4.2,
+    reviews: 12,
+    featured: false,
+  },
+];
