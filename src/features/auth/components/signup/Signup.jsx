@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/auth/signup", {
+      const res = await fetch("https://backend-production-fccb.up.railway.app/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

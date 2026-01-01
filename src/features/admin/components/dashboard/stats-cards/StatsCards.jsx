@@ -18,12 +18,12 @@ const StatsCards = () => {
         const token = localStorage.getItem("token");
 
         // Fetch products
-        const productsRes = await fetch("http://localhost:8080/products");
+        const productsRes = await fetch("https://backend-production-fccb.up.railway.app/products");
         const productsData = await productsRes.json();
 
         const normalProducts = productsData.data.filter((p) => !p.isFeatured);
 
-        const usersRes = await fetch("http://localhost:8080/admin/users", {
+        const usersRes = await fetch("https://backend-production-fccb.up.railway.app/admin/users", {
           headers: {
             Authorization: "Bearer " + token,
           },
@@ -34,7 +34,7 @@ const StatsCards = () => {
           (u) => u.role === "user"
         );
         // Fetch orders (admin)
-        const ordersRes = await fetch("http://localhost:8080/admin/orders", {
+        const ordersRes = await fetch("https://backend-production-fccb.up.railway.app/admin/orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const ordersData = await ordersRes.json();

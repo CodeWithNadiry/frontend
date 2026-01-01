@@ -29,7 +29,7 @@ const AddProduct = () => {
     formData.set("isFeatured", isFeatured);
 
     try {
-      const res = await fetch("http://localhost:8080/admin/products", {
+      const res = await fetch("https://backend-production-fccb.up.railway.app/admin/products", {
         method: "POST",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),

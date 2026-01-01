@@ -45,7 +45,9 @@ const Product = ({ product, isModal }) => {
   function handleAdd() {
     const result = addItem(currentProduct);
     if (result?.reason === "NOT_AUTH") {
-      navigate("/login");
+      if (isModal) closeModal();
+      navigate("/auth/login", {replace: true});
+      return;
     }
     if (result?.reason === "ADMIN") {
       alert("Admins cannot add items to cart");
