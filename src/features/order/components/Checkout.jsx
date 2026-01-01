@@ -39,7 +39,7 @@ const Checkout = () => {
       clearCart();
       setTimeout(() => {
         navigate("/orders");
-      }, 3000);
+      }, 2000);
     } catch (err) {
       setMessage(err.message);
     } finally {
