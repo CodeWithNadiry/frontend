@@ -18,23 +18,28 @@ const Checkout = () => {
     setMessage("");
 
     try {
-      const res = await fetch("https://backend-production-fccb.up.railway.app/orders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify({
-          items
-        })
-      });
+      const res = await fetch(
+        "https://backend-production-fccb.up.railway.app/orders",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({
+            items,
+          }),
+        }
+      );
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Something went wrong");
 
-      setMessage(data.message);
+      setMessage("✅ Email sent! Check your inbox.");
 
       clearCart();
-      navigate("/orders");
+      setTimeout(() => {
+        navigate("/orders");
+      }, 2000);
     } catch (err) {
       setMessage(err.message);
     } finally {
@@ -48,7 +53,11 @@ const Checkout = () => {
       {items.map((item) => (
         <div key={item._id} className={styles.cartItem}>
           <img
-            src={item.image ? `https://backend-production-fccb.up.railway.app/${item.image}` : "/placeholder.png"}
+            src={
+              item.image
+                ? `https://backend-production-fccb.up.railway.app/${item.image}`
+                : "/placeholder.png"
+            }
             alt={item.name}
             className={styles.itemImage}
           />
